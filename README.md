@@ -13,4 +13,4 @@ This project is a boiler plate for creating Node packages in React.
 7. Run `npm run build`
     **Note: This is command is set in package.json and is currently set to del in the beginning of the command for windows. You need to change it rm for mac and linux**
 8. The files will be added to a dist file in the root of the project
-9. Source and inspiration of this boiler plate [Publish React components as an npm package](https://levelup.gitconnected.com/publish-react-components-as-an-npm-package-7a671a2fb7f)
+9. Source and inspiration of this boiler plate [Publish React components as an npm package](https://levelup.gitconnected.com/publish-react-components-as-an-npm-package-7a671a2fb7f)# react-slider
