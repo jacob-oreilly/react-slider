@@ -1,9 +1,10 @@
 import React from 'react';
 
-const Slide = () => {
+const Slide = (props) => {
+    console.log(props.data);
     return (
         <>
-            <h4>Slide</h4>
+            <div>{props.data.text}</div>
         </>
     );
 }
