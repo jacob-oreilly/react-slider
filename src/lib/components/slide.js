@@ -1,10 +1,9 @@
 import React from 'react';
 
-const Slide = (props) => {
-    console.log(props.data);
+const Slide = ({ data, showSlide }) => {
     return (
         <>
-            <div>{props.data.text}</div>
+            <div className={'slide ' + showSlide}>{data.text}</div>
         </>
     );
 }

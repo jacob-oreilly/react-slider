@@ -1,12 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Slide from './slide';
+import SliderControls from './sliderControls';
+import './slider.scss'
 
-const Slider = (props) => {
-    console.log(props.data);
+const Slider = ({ data, height, width, showBullets, showControls, autoSlide, startIndex }) => {
+    console.log(showBullets);
+    const [activeSlide, setActiveSlide] = useState(startIndex ? startIndex : 0);
+
     return (
         <>
             <h4>Slider</h4>
-            {props.data.map((element) => (<Slide data={element} />))}
+            <div className='slider'>
+                {data.map((element, index) => (<Slide key={index} data={element} showSlide={activeSlide === index ? 'active' : ''} />))}
+            </div>
+            <SliderControls />
         </>
     );
 }
