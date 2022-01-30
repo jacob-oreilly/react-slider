@@ -1,14 +1,13 @@
 import React from "react";
 
-const SliderControls = ({ slideCount, activeSlide, setActiveSlide }) => {
-    let slideIndex = slideCount - 1;
+const SliderControls = ({ slideCount, activeSlide, setActiveSlide, sliderIndexCount }) => {
     function onControlClick(index) {
         setActiveSlide(index);
     }
     return (
         <div>
-            <button onClick={() => onControlClick(activeSlide !== 0 ? (activeSlide - 1) : (activeSlide + slideIndex))}>Prev</button>
-            <button onClick={() => onControlClick(activeSlide !== slideIndex ? (activeSlide + 1) : 0)}>Next</button>
+            <button className="prev" onClick={() => onControlClick(activeSlide !== 0 ? (activeSlide - 1) : (activeSlide + sliderIndexCount))}>Prev</button>
+            <button className="next" onClick={() => onControlClick(activeSlide !== sliderIndexCount ? (activeSlide + 1) : 0)}>Next</button>
         </div>
     )
 }

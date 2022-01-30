@@ -7,13 +7,14 @@ const Slider = ({ data, height, width, showBullets, showControls, autoSlide, sta
     console.log(showBullets);
     const [activeSlide, setActiveSlide] = useState(startIndex ? startIndex : 0);
     console.log(activeSlide);
+    let sliderIndexCount = data.length - 1;
     return (
         <>
             <h4>Slider</h4>
             <div className='slider'>
-                {data.map((element, index) => (<Slide key={index} data={element} showSlide={activeSlide === index ? 'active' : ''} />))}
+                {data.map((element, index) => (<Slide key={index} data={element} currentSlideIndex={index} showSlide={activeSlide === index ? 'active' : ''} />))}
             </div>
-            <SliderControls slideCount={data.length} activeSlide={activeSlide} setActiveSlide={setActiveSlide} />
+            <SliderControls sliderIndexCount={sliderIndexCount} activeSlide={activeSlide} setActiveSlide={setActiveSlide} />
         </>
     );
 }

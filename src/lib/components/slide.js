@@ -1,9 +1,9 @@
 import React from 'react';
 
-const Slide = ({ data, showSlide }) => {
+const Slide = ({ data, showSlide, currentSlideIndex }) => {
     return (
         <>
-            <div className={'slide ' + showSlide}>{data.text}</div>
+            <div className={'slide ' + showSlide} id={"slide-" + currentSlideIndex}>{data.text}</div>
         </>
     );
 }
